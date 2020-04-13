@@ -21,4 +21,18 @@ namespace TestUtils
       Assert::Fail(msg.c_str());
     }
   }
+
+  //------------------------------------------------------------------------------------------------
+  void LuaAssert::IsValid(sol::object object)
+  {
+    Assert::IsTrue(object.valid());
+  }
+
+  //------------------------------------------------------------------------------------------------
+  void LuaAssert::IsTable(sol::object table)
+  {
+    LuaAssert::IsValid(table);
+    Assert::IsTrue(table.is<sol::table>());
+    LuaAssert::IsValid(table.as<sol::table>());
+  }
 }

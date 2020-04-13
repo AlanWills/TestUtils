@@ -9,6 +9,9 @@ namespace TestUtils
   {
     public:
       static void IsValid(sol::protected_function_result result);
+      static void IsValid(sol::object object);
+
+      static void IsTable(sol::object result);
 
     private:
       LuaAssert() = default;

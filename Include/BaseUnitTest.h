@@ -9,20 +9,11 @@ namespace TestUtils
   class BaseUnitTest
   {
     public:
-      BaseUnitTest() { }
-      virtual ~BaseUnitTest() noexcept(false) { }
+      BaseUnitTest() = default;
+      virtual ~BaseUnitTest() noexcept(false) {}
 
-      void testInitializeCaller() 
-      { 
-        TempDirectory::clean();
-        testInitialize(); 
-      }
-
-      void testCleanupCaller()
-      {
-        TempDirectory::clean();
-        testCleanup();
-      }
+      void testInitializeCaller();
+      void testCleanupCaller();
 
     protected:
       static void testClassInitialize() { }
@@ -30,6 +21,9 @@ namespace TestUtils
 
       virtual void testInitialize() { }
       virtual void testCleanup() { }
+
+      void resetState();
+      void resetTempDirectory();
   };
 }
 
