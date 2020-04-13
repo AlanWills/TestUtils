@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CppUnitTest.h"
+#include "FileSystem/Path.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -10,11 +11,18 @@ namespace TestUtils
   class FileAssert
   {
     public:
-      /// Checks that the file with the inputted filepath exists
-      static void FileExists(const std::string& fullFilePath);
 
-      /// Checks that the file with the inputted filepath exists
-      static void FileDoesNotExist(const std::string& fullFilePath);
+      //------------------------------------------------------------------------------------------------
+      // FileExists
+      static void FileExists(const Celeste::Path& path) { FileExists(path.as_string()); }
+      static void FileExists(const std::string& fullFilePath) { FileExists(fullFilePath.c_str()); }
+      static void FileExists(const char* fullFilePath);
+
+      //------------------------------------------------------------------------------------------------
+      // FileDoesNotExist
+      static void FileDoesNotExist(const Celeste::Path& path) { FileDoesNotExist(path.as_string()); }
+      static void FileDoesNotExist(const std::string& fullFilePath) { FileDoesNotExist(fullFilePath.c_str()); }
+      static void FileDoesNotExist(const char* fullFilePath);
 
       /// Checks that the contents of the file with the inputted filepath matches the inputted expected string
       static void FileContentsEqual(const std::string& fullFilePath, const std::string& expectedFileContents);

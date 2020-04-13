@@ -6,14 +6,14 @@
 namespace TestUtils
 {
   //------------------------------------------------------------------------------------------------
-  void FileAssert::FileExists(const std::string& fullFilePath)
+  void FileAssert::FileExists(const char* fullFilePath)
   {
     std::fstream file(fullFilePath);
     Assert::IsTrue(file.good());
   }
 
   //------------------------------------------------------------------------------------------------
-  void FileAssert::FileDoesNotExist(const std::string& fullFilePath)
+  void FileAssert::FileDoesNotExist(const char* fullFilePath)
   {
     std::fstream file(fullFilePath);
     Assert::IsFalse(file.good());

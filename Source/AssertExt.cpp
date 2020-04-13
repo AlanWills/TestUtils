@@ -1,4 +1,5 @@
 #include "AssertExt.h"
+#include "Conversion/String.h"
 
 
 namespace TestUtils
