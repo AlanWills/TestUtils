@@ -11,7 +11,7 @@ set(LIBS
     CelesteStl
     FileSystem)
 
-build_library(
+cbt_build_project(
     NAME TestUtils 
     FOLDER Testing 
     TYPE STATIC 
