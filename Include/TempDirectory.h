@@ -1,7 +1,6 @@
 #pragma once
 
 #include "FileSystem/Path.h"
-#include "FileSystem/Directory.h"
 
 #include <string>
 
@@ -16,12 +15,7 @@ namespace TestUtils
 
       static void setParentDirectory(const std::string& parentDirectory) { m_parentDirectory = parentDirectory; }
 
-      static void clean()
-      {
-        Celeste::Directory temp(getFullPath());
-        temp.remove();
-        temp.create();
-      }
+      static void clean();
 
     private:
       static std::string m_parentDirectory;
