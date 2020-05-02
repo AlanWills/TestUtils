@@ -4,7 +4,7 @@
 #include "FileSystem/Path.h"
 #include "FileSystem/File.h"
 #include "FileSystem/Directory.h"
-#include "Conversion/String.h"
+#include "CelesteStl/Conversion/String.h"
 
 
 //----------------------------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "TempDirectory.h"
-#include "AssertSpecialization/FileSystem.h"
+#include "TestUtils/TestResources/TempDirectory.h"
+#include "TestUtils/AssertSpecialization/FileSystem.h"
 
 
 namespace TestUtils

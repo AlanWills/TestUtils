@@ -1,4 +1,4 @@
-#include "LuaAssert.h"
+#include "TestUtils/Assert/LuaAssert.h"
 #include "CppUnitTest.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;

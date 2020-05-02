@@ -1,4 +1,4 @@
-#include "DirectoryAssert.h"
+#include "TestUtils/Assert/DirectoryAssert.h"
 
 #include <dirent.h>
 
