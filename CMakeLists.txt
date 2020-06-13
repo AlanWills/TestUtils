@@ -11,7 +11,7 @@ set(LIBS
     CelesteStl
     FileSystem)
 
-if (BUILD_TESTS)
+if (${BUILD_TESTS})
     cbt_build_project(
         NAME TestUtils 
         FOLDER Testing 
