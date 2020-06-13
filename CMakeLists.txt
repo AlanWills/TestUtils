@@ -11,11 +11,13 @@ set(LIBS
     CelesteStl
     FileSystem)
 
-cbt_build_project(
-    NAME TestUtils 
-    FOLDER Testing 
-    TYPE STATIC 
-    INCLUDES "${INCLUDES}"
-    LIBS "${LIBS}")
+if (BUILD_TESTS)
+    cbt_build_project(
+        NAME TestUtils 
+        FOLDER Testing 
+        TYPE STATIC 
+        INCLUDES "${INCLUDES}"
+        LIBS "${LIBS}")
 
-target_compile_definitions(TestUtils PUBLIC -DGLM_FORCE_SILENT_WARNINGS)
+    target_compile_definitions(TestUtils PUBLIC -DGLM_FORCE_SILENT_WARNINGS)
+endif()
