@@ -8,6 +8,7 @@ set(LIBS
     glm
     liblua
     sol2
+    StringId
     CelesteStl
     FileSystem)
 

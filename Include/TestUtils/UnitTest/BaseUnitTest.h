@@ -2,6 +2,7 @@
 
 #include "TestUtils/TestResources/TempDirectory.h"
 #include "TestUtils/AssertSpecialization/FileSystem.h"
+#include "TestUtils/AssertSpecialization/string_id.h"
 
 
 namespace TestUtils
