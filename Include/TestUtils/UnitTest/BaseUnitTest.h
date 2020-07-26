@@ -28,7 +28,7 @@ namespace TestUtils
   };
 }
 
-#define TEST_UTILS_TEST_CLASS(ClassName) \
+#define BASE_TEST_CLASS(ClassName) \
   TEST_CLASS(ClassName), public TestUtils::BaseUnitTest \
   { \
     public:\
